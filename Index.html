@@ -48,12 +48,44 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-      var map = L.map("map").setView([10.42086, -75.54615], 16); // Coordenadas de Getsemaní, Cartagena
+      const map = L.map("map").setView([10.42086, -75.54615], 16); // Coordenadas de Getsemaní, Cartagena
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
           '&copy; Map data from <a href="https://www.openstreetmap.org/copyright" target=_blank >OpenStreetMap</a>',
       }).addTo(map);
+
+      function crearPopup(lugar) {
+        return `
+        <div class="popup-content">
+          <h3>${lugar.nombre}</h3>
+          <h5>${lugar.capa}</h5>
+          <p>${lugar.direccion}</p>
+          <p>Latitud: ${lugar.lat} Longitud: ${lugar.lng}</p>
+          <img src="${lugar.imagen}" alt="${lugar.nombre}">
+        </div>
+      `;
+      }
+
+      // Cargar el archivo JSON con los lugares
+      fetch("lugares.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Error al cargar el archivo JSON");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          data.forEach((lugar) => {
+            // Añadir un marcador por cada lugar
+            L.marker([lugar.lat, lugar.lng])
+              .addTo(map)
+              .bindPopup(crearPopup(lugar));
+          });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     </script>
   </body>
 </html>
