@@ -9,21 +9,21 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="logo/apple-touch-icon.png"
+      href="icons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="logo/favicon-32x32.png"
+      href="icons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="logo/favicon-16x16.png"
+      href="icons/favicon-16x16.png"
     />
-    <link rel="manifest" href="logo/site.webmanifest" />
+    <link rel="manifest" href="icons/site.webmanifest" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -40,31 +40,36 @@
         height: 100%;
         width: 100%;
       }
+      .icono-lord {
+        width: 60px;
+        height: 60px;
+        background: none;
+        border: none;
+      }
     </style>
   </head>
 
   <body>
     <div id="map"></div>
-
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
       const map = L.map("map").setView([10.42086, -75.54615], 16); // Coordenadas de Getsemaní, Cartagena
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
-          '&copy; Map data from <a href="https://www.openstreetmap.org/copyright" target=_blank >OpenStreetMap</a>',
+          'Map data from <a href="https://www.openstreetmap.org/copyright" target="_blank" >OpenStreetMap</a> &copy;',
       }).addTo(map);
 
       function crearPopup(lugar) {
         return `
-        <div class="popup-content">
-          <h3>${lugar.nombre}</h3>
-          <h5>${lugar.capa}</h5>
-          <p>${lugar.direccion}</p>
-          <p>Latitud: ${lugar.lat} Longitud: ${lugar.lng}</p>
-          <img src="${lugar.imagen}" alt="${lugar.nombre}">
-        </div>
-      `;
+          <div class="popup-content">
+            <h3>${lugar.nombre}</h3>
+            <h5>${lugar.capa}</h5>
+            <p>${lugar.direccion}</p>
+            <p>Latitud: ${lugar.lat} Longitud: ${lugar.lng}</p>
+          </div>
+        `;
       }
 
       // Cargar el archivo JSON con los lugares
@@ -78,7 +83,60 @@
         .then((data) => {
           data.forEach((lugar) => {
             // Añadir un marcador por cada lugar
-            L.marker([lugar.lat, lugar.lng])
+            let lordiconHTML = `<lord-icon
+                  src="https://cdn.lordicon.com/tdrtiskw.json"
+                  trigger="in"
+                  delay="250"
+                  state="in-reveal"
+                  style="width:40px;height:40px">
+                </lord-icon>`; // Default icon
+            switch (lugar.capa) {
+              case "Comercio":
+                lordiconHTML = `<lord-icon
+                  src="https://cdn.lordicon.com/kkdnopsh.json"
+                  trigger="in"
+                  delay="250"
+                  state="in-reveal"
+                  style="width:40px;height:40px">
+                </lord-icon>`;
+                break;
+              case "Vivienda":
+                lordiconHTML = `<lord-icon
+                    src="https://cdn.lordicon.com/pgirtdfe.json"
+                    trigger="in"
+                    delay="250"
+                    state="in-reveal"
+                    style="width:40px;height:40px">
+                </lord-icon>`;
+                break;
+              case "Ambiente":
+                lordiconHTML = `<lord-icon
+                    src="https://cdn.lordicon.com/wmelwzdo.json"
+                    trigger="in"
+                    delay="250"
+                    state="in-reveal"
+                    style="width:40px;height:40px">
+                </lord-icon>`;
+                break;
+              case "Patrimonio":
+                lordiconHTML = `<lord-icon
+                    src="https://cdn.lordicon.com/ylscktzo.json"
+                    trigger="in"
+                    delay="250"
+                    state="in-reveal"
+                    style="width:40px;height:40px">
+                </lord-icon>`;
+                break;
+            }
+
+            const lugar_icon = L.divIcon({
+              html: lordiconHTML,
+              className: 'icono-lord',
+              iconSize: [10, 10],
+              popupAnchor: [0, -25]
+            });
+
+            L.marker([lugar.lat, lugar.lng], { icon: lugar_icon })
               .addTo(map)
               .bindPopup(crearPopup(lugar));
           });
