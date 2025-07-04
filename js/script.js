@@ -1,4 +1,4 @@
-const map = L.map("map").setView([10.42086, -75.54615], 16); // Coordenadas de Getsemaní, Cartagena
+const map = L.map("map").setView([10.42086, -75.54615], 15); // Coordenadas de Getsemaní, Cartagena
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
@@ -10,8 +10,14 @@ const COLOR_CAPA = {
   Vivienda: "rgb(255, 0, 0)",
   Ambiente: "rgb(0, 255, 0)",
   Patrimonio: "rgb(43, 81, 248)",
-  default: "rgb(124, 124, 124)",
+  default: "rgb(214, 214, 214)",
 };
+
+document.querySelectorAll('.filter-button').forEach(button => {
+  const capa = button.dataset.capa;
+  const color = COLOR_CAPA[capa];
+  button.style.backgroundColor = color;
+});
 
 const LORDICON_HTML = {
   Comercio: `<lord-icon
