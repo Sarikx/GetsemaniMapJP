@@ -37,18 +37,41 @@
     <div class="wrapper">
       <section class="filter-buttons">
         <div class="filter-button-row">
-          <button class="filter-button" data-capa="default">Todos</button>
+          <button class="filter-button" data-capa="Todos">Todos</button>
           <button class="filter-button" data-capa="Comercio">Comercio</button>
           <button class="filter-button" data-capa="Vivienda">Vivienda</button>
           <button class="filter-button" data-capa="Ambiente">Ambiente</button>
-          <button class="filter-button" data-capa="Patrimonio">Patrimonio</button>
-          <button class="filter-button" data-capa="default">Ninguno</button>
-          <button class="filter-button" data-capa="default">&equiv;</button>
+          <button class="filter-button" data-capa="Patrimonio">
+            Patrimonio
+          </button>
+          <button class="filter-button" data-capa="Ninguno">Ninguno</button>
+          <button class="filter-button" data-capa="Info">&equiv;</button>
         </div>
       </section>
     </div>
 
     <div id="map"></div>
+
+    <div id="modalInfo" class="modal">
+      <div class="modal-contenido">
+        <span id="cerrarModal" class="cerrar">&times;</span>
+        <h2>GetsemaniMap J&P</h2>
+        <h3>Sobre el proyecto</h3>
+        <p>
+          Este mapa fue realizado por:<br />
+          Julian Esneider Rojas Vargas - 022220040<br />
+          Nadie mas
+        </p>
+        <p>
+          Iconos por:
+          <a href="https://lordicon.com/" target="_blank">Lordicon</a>.
+        </p>
+        <p>
+          Datos geográficos:
+          <a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a>.
+        </p>
+      </div>
+    </div>
 
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

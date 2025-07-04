@@ -10,13 +10,32 @@ const COLOR_CAPA = {
   Vivienda: "rgb(255, 0, 0)",
   Ambiente: "rgb(0, 255, 0)",
   Patrimonio: "rgb(43, 81, 248)",
-  default: "rgb(214, 214, 214)",
+  Todos: "rgb(214, 214, 214)",
+  Ninguno: "rgb(214, 214, 214)",
+  Info: "rgb(214, 214, 214)",
 };
 
-document.querySelectorAll('.filter-button').forEach(button => {
+document.querySelectorAll(".filter-button").forEach((button) => {
   const capa = button.dataset.capa;
   const color = COLOR_CAPA[capa];
   button.style.backgroundColor = color;
+
+  button.addEventListener("click", () => {
+    document
+      .querySelectorAll(".filter-button")
+      .forEach((b) => b.classList.remove("activo"));
+    button.classList.add("activo");
+
+    if (capa === "Todos") {
+      mostrarTodosLosMarcadores();
+    } else if (capa === "Ninguno") {
+      ocultarTodosLosMarcadores();
+    } else if (capa === "Info") {
+      mostrarInfoProyecto();
+    } else {
+      mostrarMarcadoresDeCapa(capa);
+    }
+  });
 });
 
 const LORDICON_HTML = {
@@ -65,8 +84,9 @@ function crearPopup(lugar) {
   const color = COLOR_CAPA[lugar.capa] || COLOR_CAPA.default;
   return `
     <div class="popup-content">
-    <h3>${lugar.nombre}</h3>
-     <span style="
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <h3 style="margin: 0;">${lugar.nombre}</h3>
+        <span style="
           background-color: ${color};
           color: black;
           padding: 1px 6px;
@@ -75,12 +95,20 @@ function crearPopup(lugar) {
         ">
           ${lugar.capa}
         </span>
-    <p>${lugar.direccion}</p>
-    <p>Latitud: ${lugar.lat} Longitud: ${lugar.lng}</p>
-    <img src="${lugar.imagen}" alt="${lugar.nombre}">
+      </div>
+      <p>${lugar.direccion}</p>
+      <p>Latitud: ${lugar.lat} &nbsp; &nbsp; Longitud: ${lugar.lng}</p>
+      <img src="${lugar.imagen}" alt="${lugar.nombre}">
     </div>
-`;
+  `;
 }
+
+const marcadoresPorCapa = {
+  Comercio: [],
+  Vivienda: [],
+  Ambiente: [],
+  Patrimonio: [],
+};
 
 // Cargar el archivo JSON con los lugares
 fetch("lugares.json")
@@ -90,9 +118,8 @@ fetch("lugares.json")
     }
     return response.json();
   })
-  .then((data) => {
-    data.forEach((lugar) => {
-      const color = COLOR_CAPA[lugar.capa] || COLOR_CAPA.default;
+  .then((lugares) => {
+    lugares.forEach((lugar) => {
       const lordiconHTML = LORDICON_HTML[lugar.capa] || LORDICON_HTML.default;
 
       const lugar_icon = L.divIcon({
@@ -102,11 +129,61 @@ fetch("lugares.json")
         popupAnchor: [0, -25],
       });
 
-      L.marker([lugar.lat, lugar.lng], { icon: lugar_icon })
-        .addTo(map)
-        .bindPopup(crearPopup(lugar));
+      const marker = L.marker([lugar.lat, lugar.lng], { icon: lugar_icon })
+        .bindPopup(crearPopup(lugar))
+        .addTo(map);
+
+      // Guardar el marcador en su categoría
+      if (marcadoresPorCapa[lugar.capa]) {
+        marcadoresPorCapa[lugar.capa].push(marker);
+      }
     });
   })
   .catch((error) => {
     console.error("Error:", error);
   });
+
+function ocultarTodosLosMarcadores() {
+  for (const capa in marcadoresPorCapa) {
+    marcadoresPorCapa[capa].forEach((marker) => map.removeLayer(marker));
+  }
+}
+
+function mostrarMarcadoresDeCapa(capaSeleccionada) {
+  ocultarTodosLosMarcadores();
+  if (marcadoresPorCapa[capaSeleccionada]) {
+    marcadoresPorCapa[capaSeleccionada].forEach((marker) => marker.addTo(map));
+  }
+}
+
+function mostrarTodosLosMarcadores() {
+  for (const capa in marcadoresPorCapa) {
+    marcadoresPorCapa[capa].forEach((marker) => marker.addTo(map));
+  }
+}
+
+// Manejo del modal que muestra la información del proyecto
+document.addEventListener("DOMContentLoaded", () => {
+  const infoToggle = document.getElementById("infoToggle");
+  const cerrarModal = document.getElementById("cerrarModal");
+  const modalInfo = document.getElementById("modalInfo");
+
+  if (infoToggle && modalInfo) {
+    infoToggle.addEventListener("click", () => {
+      modalInfo.style.display = "block";
+    });
+  }
+
+  if (cerrarModal && modalInfo) {
+    cerrarModal.addEventListener("click", () => {
+      modalInfo.style.display = "none";
+    });
+  }
+});
+
+function mostrarInfoProyecto() {
+  const modalInfo = document.getElementById("modalInfo");
+  if (modalInfo) {
+    modalInfo.style.display = "block";
+  }
+}
