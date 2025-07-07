@@ -38,6 +38,7 @@ document.querySelectorAll(".filter-button").forEach((button) => {
   });
 });
 
+// Cargar los iconos de Lordicon para cada capa
 const LORDICON_HTML = {
   Comercio: `<lord-icon
             src="https://cdn.lordicon.com/kkdnopsh.json"

@@ -1,19 +1,118 @@
 [
   {
-    "nombre": "Restaurante La Plaza",
-    "lat": 10.4220,
-    "lng": -75.5460,
-    "direccion": "Calle 1 #12-34, Getsemaní, Cartagena",
-    "capa": "Comercio",
-    "imagen": "imgPlaces/perroNerd.png"
+    "nombre": "Callejon Angosto",
+    "lat": 10.4195000,
+    "lng": -75.545100,
+    "direccion": "Cl. 27 #10b-2 a, Cra. 10b #120",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/CallejonAngosto.JPG"
   },
 
   {
-    "nombre": "Parque del Centenario",
-    "lat": 10.4227,
-    "lng": -75.5475,
-    "direccion": "Calle del Arsenal, Getsemaní, Cartagena",
+    "nombre": "Casapachita",
+    "lat": 10.41954,
+    "lng": -75.54454,
+    "direccion": "Calle de la Lomba 26A54",
+    "capa": "Vivienda",
+    "imagen": "imgPlaces/Casapachita.JPG"
+  },
+
+  {
+    "nombre": "Homenaje a Gabo",
+    "lat": 10.41922,
+    "lng": -75.54466,
+    "direccion": "Cl. 27 #10b-2 a, Cra. 10b #120",
     "capa": "Patrimonio",
-    "imagen": "imgPlaces/parque.jpg"
+    "imagen": "imgPlaces/HomenajeGabo.JPG"
+  },
+
+  {
+    "nombre": "Patio Getsemani",
+    "lat": 10.41964,
+    "lng": -75.54432,
+    "direccion": "Av. Pedregal #26A-79",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/Patiogetsemani.jpg"
+  },
+
+  {
+    "nombre": "Sallena House",
+    "lat": 10.41916,
+    "lng": -75.54481,
+    "direccion": "Cl. 26 #10b",
+    "capa": "Vivienda",
+    "imagen": "imgPlaces/Sallenahouse.JPG"
+  },
+
+  {
+    "nombre": "Gimnasio al aire libre",
+    "lat": 10.41942,
+    "lng": -75.54427,
+    "direccion": "Cra. 11 #2655",
+    "capa": "Ambiente",
+    "imagen": "imgPlaces/GymLibre.jpg"
+  },
+
+  {
+    "nombre": "Parque Centenario",
+    "lat": 10.42258,
+    "lng": -75.54729,
+    "direccion": "Av. Daniel Lemaitre",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/ParqueCentenario.jpg"
+  },
+
+  {
+    "nombre": "Libros Usados",
+    "lat": 10.42297,
+    "lng": -75.54797,
+    "direccion": "Dentro del Parque Centenario",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/LibrosUsados.jpg"
+  },
+
+  {
+    "nombre": "Leyendas del Mar",
+    "lat": 10.42054,
+    "lng": -75.54601,
+    "direccion": "Cl. de San Juan #25-148",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/LeyendasdelMar.jpg"
+  },
+
+  {
+    "nombre": "Arteska by Toro Cueros",
+    "lat": 10.41994,
+    "lng": -75.54611,
+    "direccion": "Cra. 10 #25-119",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/ArteskaToroCueros.png"
+  },
+
+  {
+    "nombre": "Amo el café",
+    "lat": 10.42068,
+    "lng": -75.54713,
+    "direccion": "Centro Comercial Getsemaní, Local 1A - 47",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/AmoElCafe.png"
+  },
+
+  {
+    "nombre": "Plaza de la Trinidad",
+    "lat": 10.42060,
+    "lng": -75.54548,
+    "direccion": "Esquina con, Cl. 29 #174",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/PlazaTrinidad.jpg"
+  },
+
+  {
+    "nombre": "",
+    "lat": 10.2,
+    "lng": -75.2,
+    "direccion": "",
+    "capa": "",
+    "imagen": "imgPlaces/"
   }
 ]
