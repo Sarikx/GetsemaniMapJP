@@ -108,11 +108,56 @@
   },
 
   {
-    "nombre": "",
-    "lat": 10.2,
-    "lng": -75.2,
-    "direccion": "",
-    "capa": "",
-    "imagen": "imgPlaces/"
+    "nombre": "Baluarte de San José",
+    "lat": 10.41963,
+    "lng": -75.54389,
+    "direccion": "Av. Pedregal #27-137 a 27-1",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/BaluearteSanJose.jpg"
+  },
+
+  {
+    "nombre": "Baluarte de San José",
+    "lat": 10.41963,
+    "lng": -75.54389,
+    "direccion": "Av. Pedregal #27-137 a 27-1",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/BaluearteSanJose.jpg"
+  },
+
+  {
+    "nombre": "Galeras de la marina",
+    "lat": 10.41870,
+    "lng": -75.54634,
+    "direccion": "Cl. 24 #108",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/GalerasMarina.png"
+  },
+
+  {
+    "nombre": "Consejo Distrital",
+    "lat": 10.41851,
+    "lng": -75.54654,
+    "direccion": "Cl. 24 #1081 10- a",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/ConcejoDistrital.png"
+  },
+
+  {
+    "nombre": "Plaza del pozo",
+    "lat": 10.41923,
+    "lng": -75.54573,
+    "direccion": "Cra. 10b",
+    "capa": "Ambiente",
+    "imagen": "imgPlaces/Plazadelposo.png"
+  },
+
+  {
+    "nombre": "Estatua del pescador",
+    "lat": 10.42072,
+    "lng": -75.54878,
+    "direccion": "Centro de Convenciones, Fuente Cl. 24 #8b-06 a 8b-76",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/EstatuaPescador.png"
   }
 ]
