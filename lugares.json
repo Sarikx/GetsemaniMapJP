@@ -117,15 +117,6 @@
   },
 
   {
-    "nombre": "Baluarte de San José",
-    "lat": 10.41963,
-    "lng": -75.54389,
-    "direccion": "Av. Pedregal #27-137 a 27-1",
-    "capa": "Patrimonio",
-    "imagen": "imgPlaces/BaluearteSanJose.jpg"
-  },
-
-  {
     "nombre": "Galeras de la marina",
     "lat": 10.41870,
     "lng": -75.54634,
@@ -240,5 +231,14 @@
     "direccion": "Cra. 10 #30-101 a 30-1",
     "capa": "Comercio",
     "imagen": "imgPlaces/PuraMarket.jpg"
+  },
+
+  {
+    "nombre": "Lavanderia Laundry Vienesa",
+    "lat": 10.42277,
+    "lng": -75.54559,
+    "direccion": "Cl. 29 #10b-66",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/LavanderiaLaundryVienesa.jpg"
   }
 ]
