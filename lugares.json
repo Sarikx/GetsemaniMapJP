@@ -222,5 +222,23 @@
     "direccion": "Cl. 29 #1030",
     "capa": "Comercio",
     "imagen": "imgPlaces/Arepaisa.jpg"
+  },
+
+  {
+    "nombre": "Titote",
+    "lat": 10.42029,
+    "lng": -75.54476,
+    "direccion": "Cl. 29 #10b-66",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/Titote.jpg"
+  },
+
+  {
+    "nombre": "Pura Market",
+    "lat": 10.42252,
+    "lng": -75.54556,
+    "direccion": "Cra. 10 #30-101 a 30-1",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/PuraMarket.jpg"
   }
 ]
