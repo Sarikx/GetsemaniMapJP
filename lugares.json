@@ -186,5 +186,32 @@
     "direccion": "Cl. 29",
     "capa": "Vivienda",
     "imagen": "imgPlaces/CalleSerpe.jpg"
+  },
+
+  {
+    "nombre": "Antiguo convento de San Francisco",
+    "lat": 10.42129,
+    "lng": -75.54813,
+    "direccion": "Cra. 8b #25-28",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/ConventoSanFrancisco.jpg"
+  },
+
+  {
+    "nombre": "Terraza Municipal",
+    "lat": 10.41884,
+    "lng": -75.54781,
+    "direccion": "Cl. 24",
+    "capa": "Ambiente",
+    "imagen": "imgPlaces/TerrazaMunicipal.jpg"
+  },
+
+  {
+    "nombre": "Casa de la Muralla",
+    "lat": 10.42087,
+    "lng": -75.54414,
+    "direccion": "2973, Cra. 11 # 29-73",
+    "capa": "Vivienda",
+    "imagen": "imgPlaces/CasadelaMuralla.jpg"
   }
 ]
