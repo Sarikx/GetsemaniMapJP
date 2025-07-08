@@ -1,7 +1,7 @@
 [
   {
     "nombre": "Callejon Angosto",
-    "lat": 10.4195,
+    "lat": 10.41950,
     "lng": -75.5451,
     "direccion": "Cl. 27",
     "capa": "Vivienda",
@@ -100,7 +100,7 @@
 
   {
     "nombre": "Plaza de la Trinidad",
-    "lat": 10.4206,
+    "lat": 10.42060,
     "lng": -75.54548,
     "direccion": "Esquina con, Cl. 29 #174",
     "capa": "Comercio",
@@ -127,7 +127,7 @@
 
   {
     "nombre": "Galeras de la marina",
-    "lat": 10.4187,
+    "lat": 10.41870,
     "lng": -75.54634,
     "direccion": "Cl. 24 #108",
     "capa": "Patrimonio",
