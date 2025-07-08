@@ -159,5 +159,14 @@
     "direccion": "Centro de Convenciones, Fuente Cl. 24 #8b-06 a 8b-76",
     "capa": "Patrimonio",
     "imagen": "imgPlaces/EstatuaPescador.png"
+  },
+
+  {
+    "nombre": "Centro de Convenciones",
+    "lat": 10.42131,
+    "lng": -75.54901,
+    "direccion": "Cl. 24 Calle del Arsenal",
+    "capa": "Patrimonio",
+    "imagen": "imgPlaces/CentroConvenciones.jpg"
   }
 ]
