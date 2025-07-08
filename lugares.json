@@ -1,10 +1,10 @@
 [
   {
     "nombre": "Callejon Angosto",
-    "lat": 10.4195000,
-    "lng": -75.545100,
-    "direccion": "Cl. 27 #10b-2 a, Cra. 10b #120",
-    "capa": "Patrimonio",
+    "lat": 10.419500,
+    "lng": -75.54510,
+    "direccion": "Cl. 27",
+    "capa": "Vivienda",
     "imagen": "imgPlaces/CallejonAngosto.JPG"
   },
 
@@ -168,5 +168,23 @@
     "direccion": "Cl. 24 Calle del Arsenal",
     "capa": "Patrimonio",
     "imagen": "imgPlaces/CentroConvenciones.jpg"
+  },
+
+  {
+    "nombre": "Calle de la Serpe",
+    "lat": 10.42103,
+    "lng": -75.54614,
+    "direccion": "Cl. 29",
+    "capa": "Vivienda",
+    "imagen": "imgPlaces/CalleSerpe.jpg"
+  },
+
+  {
+    "nombre": "Callejon ancho",
+    "lat": 10.42103,
+    "lng": -75.54614,
+    "direccion": "Cl. 29",
+    "capa": "Vivienda",
+    "imagen": "imgPlaces/CalleSerpe.jpg"
   }
 ]
