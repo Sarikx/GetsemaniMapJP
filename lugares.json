@@ -1,8 +1,8 @@
 [
   {
     "nombre": "Callejon Angosto",
-    "lat": 10.419500,
-    "lng": -75.54510,
+    "lat": 10.4195,
+    "lng": -75.5451,
     "direccion": "Cl. 27",
     "capa": "Vivienda",
     "imagen": "imgPlaces/CallejonAngosto.JPG"
@@ -100,7 +100,7 @@
 
   {
     "nombre": "Plaza de la Trinidad",
-    "lat": 10.42060,
+    "lat": 10.4206,
     "lng": -75.54548,
     "direccion": "Esquina con, Cl. 29 #174",
     "capa": "Comercio",
@@ -127,7 +127,7 @@
 
   {
     "nombre": "Galeras de la marina",
-    "lat": 10.41870,
+    "lat": 10.4187,
     "lng": -75.54634,
     "direccion": "Cl. 24 #108",
     "capa": "Patrimonio",
@@ -213,5 +213,14 @@
     "direccion": "2973, Cra. 11 # 29-73",
     "capa": "Vivienda",
     "imagen": "imgPlaces/CasadelaMuralla.jpg"
+  },
+
+  {
+    "nombre": "Arepaisa",
+    "lat": 10.42093,
+    "lng": -75.54558,
+    "direccion": "Cl. 29 #1030",
+    "capa": "Comercio",
+    "imagen": "imgPlaces/Arepaisa.jpg"
   }
 ]
